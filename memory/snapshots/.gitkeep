@@ -1,0 +1,3 @@
+# This directory stores compressed memory snapshots
+# Created by: memory/compress.py
+# Triggered: Every 50 runs automatically

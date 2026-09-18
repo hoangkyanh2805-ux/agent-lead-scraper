@@ -1,0 +1,4 @@
+# This directory stores versioned prompt fixes
+# Created by: error_fix/fix_prompt.py
+# Format: fix_run_XXX_TIMESTAMP.json
+# Contains: error_type, proposed_fix, reasoning, improvement_score, status
