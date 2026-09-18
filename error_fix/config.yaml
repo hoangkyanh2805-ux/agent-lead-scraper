@@ -1,0 +1,18 @@
+error_detection:
+  types:
+    - validation_error  # Malformed lead data
+    - actor_config_error  # Wrong actor input structure
+    - rate_limit_error  # Apify quota exceeded
+    - parsing_error  # Failed to extract fields from response
+
+error_fix:
+  strategy: "root_cause_analysis"
+  # 1. Detect error type
+  # 2. Propose fix (adjust actor config, add retry logic, etc.)
+  # 3. Version and commit to prompt_history/
+  # 4. Re-run with updated prompt
+
+prompt_history:
+  storage: "prompt_history/"
+  versioning: "timestamp_json"
+  retention: "last_10_versions"

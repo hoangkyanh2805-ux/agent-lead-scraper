@@ -1,0 +1,14 @@
+# Lead Scraper Self-Improving Agent - Requirements
+
+# Core dependencies
+anthropic>=0.50.0  # Claude API for memory compression
+openai>=1.0.0  # OpenAI embeddings for RAG
+numpy>=1.24.0  # Numeric operations (cosine similarity)
+pyyaml>=6.0  # Config file parsing
+
+# Apify integration
+apify-client>=1.5.0  # Apify Python client
+
+# Optional: Development & Testing
+pytest>=7.0.0  # Testing framework
+python-dotenv>=1.0.0  # Load .env files

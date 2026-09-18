@@ -1,0 +1,9 @@
+embedding:
+  model: "text-embedding-3-small"
+  dimensions: 1536
+
+retrieval:
+  top_k: 20
+  # For lead scraping (complex queries), use 20-30
+  # Increase to 40 for multi-actor orchestration tasks
+  min_similarity_score: 0.7

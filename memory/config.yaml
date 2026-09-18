@@ -1,0 +1,14 @@
+memory:
+  compression:
+    strategy: "periodic_summarize"
+    trigger: "every_50_runs"  # Compress after 50 scraping runs
+
+  snapshots:
+    storage: "snapshots/"
+    format: "json_with_pointers"
+    # Include: top actors, successful patterns, error patterns, dedup rules
+    # Point back to full conversation for details
+
+  retention:
+    keep_last_n_raw: 5  # Last 5 full runs
+    keep_snapshots: "all"  # All compressed summaries

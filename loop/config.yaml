@@ -1,0 +1,14 @@
+loop:
+  max_iterations: 10
+  no_improvement_threshold: 2  # Stop if 2 consecutive runs show no improvement
+  quality_metrics:
+    - deduplication_rate  # Must be > 95%
+    - lead_validation_rate  # Must be > 98%
+    - processing_time_consistency  # Variation < 20%
+
+termination:
+  triggers:
+    - all_actors_exhausted
+    - dedup_rate_below_threshold
+    - api_rate_limit_hit
+    - no_quality_improvement_for_n_runs: 2
